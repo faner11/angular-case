@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  BASE_URL: `https://test.BASE_URL.com/admin/`,
+  LOGIN_URL: `https://test.LOGIN_URL.com/login/`,
   production: false
 };
 

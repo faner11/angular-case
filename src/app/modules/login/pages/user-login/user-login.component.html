@@ -1,0 +1,63 @@
+<div class="login-screen">
+  <div class="container">
+    <h3>顽途口子百科管理</h3>
+    <div class="input-box ma-t">
+      <nz-input-group
+        [nzSuffix]="suffixTemplate"
+        [nzPrefix]="prefixTemplate"
+        [nzSize]="'large'"
+      >
+        <input
+          type="text"
+          nz-input
+          placeholder="请输入用户名"
+          [(ngModel)]="user.userName"
+        />
+      </nz-input-group>
+      <ng-template #prefixTemplate><i nz-icon type="user"></i></ng-template>
+      <ng-template #suffixTemplate
+        ><i
+          nz-icon
+          type="close-circle"
+          (click)="user.userName = null"
+          *ngIf="user.userName"
+        ></i
+      ></ng-template>
+    </div>
+    <div class="input-box">
+      <nz-input-group
+        [nzSuffix]="suffixTemplatePass"
+        [nzPrefix]="prefixTemplatePass"
+        [nzSize]="'large'"
+      >
+        <input
+          type="password"
+          nz-input
+          placeholder="请输入密码"
+          [(ngModel)]="user.passWord"
+        />
+      </nz-input-group>
+      <ng-template #prefixTemplatePass><i nz-icon type="lock"></i></ng-template>
+      <ng-template #suffixTemplatePass
+        ><i
+          nz-icon
+          type="close-circle"
+          (click)="user.passWord = null"
+          *ngIf="user.passWord"
+        ></i
+      ></ng-template>
+    </div>
+    <div class="but-box">
+      <button
+        nz-button
+        nzType="primary"
+        nzSize="large"
+        nzBlock
+        [disabled]="!user.passWord && !user.userName"
+        (click)="wtLogin()"
+      >
+        登录
+      </button>
+    </div>
+  </div>
+</div>

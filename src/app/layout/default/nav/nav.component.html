@@ -1,0 +1,14 @@
+<ul nz-menu nzTheme="dark" nzMode="inline">
+  <li
+    *ngFor="let item of navList"
+    class="nav-bk"
+    nz-menu-item
+    [routerLink]="item.url"
+    routerLinkActive="ant-menu-item-selected"
+  >
+    <span>
+      <i nz-icon [type]="item.icon"></i>
+      <span class="nav-text"> {{ item.text }} </span>
+    </span>
+  </li>
+</ul>

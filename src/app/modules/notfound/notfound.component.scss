@@ -1,0 +1,28 @@
+.notfound {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  top: 0;
+  bottom: 0px;
+  left: 0px;
+  background: #282828;
+  background-size: 100%;
+  background-blend-mode: multiply;
+  p {
+    color: white;
+    a:link,
+    a:visited {
+      color: white;
+    }
+    a:hover,
+    a:active {
+      text-decoration: underline;
+    }
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+}
